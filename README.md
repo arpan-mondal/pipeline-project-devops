@@ -52,7 +52,7 @@ This Project basically provide an End-to-End-CI/CD where we Checkout SCM, Sonar 
 ##
 
 ## Server Management & Installation
-- In total we are creating 5 server for Jenkins, SonarQube, Nexus, 
+- In total we are creating 5 server for Jenkins, SonarQube, Nexus, Master and Node
 
 ## 1st Server - Jenkins
 - ubuntu20
