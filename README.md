@@ -260,6 +260,57 @@ once that's done we need to execute ```systemctl restart docker``` this is to ap
 once this is done from jenkins host you can try ```docker login -u nexus_username -p nexus_pass nexus_ip:8083```
 
 
+# Configuring mail server in Jenkins.
+
+## Pre-requisite 
+- running Jenkins server 
+- Gmail account with insecure apps enabled 
+
+## setup 
+
+Install ```Email Extension Plugin``` in Jenkins 
+
+Once plugin installed in jenkins, click on manage jenkins --> configure system there under E-mail Notification section configure the details as shown in below image 
+
+![image](https://user-images.githubusercontent.com/35370115/201904162-4184bad5-64b5-40e7-8d1f-6e6c37ffc140.png)
+
+this is to just verify mail configuration 
+
+Now under Extended E-mail Notification section configure the details as shown in below images 
+
+![image](https://user-images.githubusercontent.com/35370115/201904625-6e97bdeb-530d-4322-a23f-bfb00bbcb73f.png)
+![image](https://user-images.githubusercontent.com/35370115/201904796-4ee6f249-2358-4c30-b7aa-cce9291a3433.png)
+![mail4](https://user-images.githubusercontent.com/29688323/136435260-fdef923a-3c42-4269-9d2c-143d84471dcf.JPG)
+
+By using below code i can send customized mail 
+
+```
+post {
+		always {
+			mail bcc: '', body: "<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "${currentBuild.result} CI: Project name -> ${env.JOB_NAME}", to: "vikash.mrdevops@gmail.com";  
+		}
+	}
+```
+
+also which ever the mail you use for authentication in that mail setting "Less secure apps access" should be enabled 
+
+![mail5](https://user-images.githubusercontent.com/29688323/136435833-879ce27a-1212-4398-a319-f4e6b778ebe6.JPG)
+
+Sometimes we need do extra setting https://g.co/allowaccess allowed access from outside for a limited time and this solved my problem. 
+
+Default Subject
+
+```
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
+```
+
+```
+$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+Check console output at $BUILD_URL to view the results.
+```
+
+
 
 
 
