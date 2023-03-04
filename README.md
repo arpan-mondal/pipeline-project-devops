@@ -336,6 +336,9 @@ chmod 700 get_helm.sh
 # Datree.io Install 
 
 curl https://get.datree.io | /bin/bash
+
+apt-get install unzip
+
 datree version
 datree test <your_kubernetes_manifest_YAML_NAME>
 ```
