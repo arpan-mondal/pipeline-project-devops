@@ -1,5 +1,5 @@
 # End-to-End-CI-CD-Project
-This Project basically provide an End-to-End-CI/CD where we Checkout SCM, Sonar Quality Check of the code, Check Quality Gate Status, Docker build and Docker push to Nexus, Identifying misconfiguration using datree in Helm Charts, Pushing helm charts to nexus and finally a Declarative Post Action.
+This Project basically provide an End-to-End-CI/CD where we Checkout SCM, Sonar Quality Check of the code, Check Quality Gate Status, Docker build and Docker push to Nexus, Identifying misconfiguration using datree in Helm Charts, Pushing helm charts to nexus, Deploying to kubernetes and finally a Declarative Post Action.
 
 # INITIAL THOUGHT-PROCESS
 ![initial_thought](https://user-images.githubusercontent.com/66848339/222870337-3a4b4048-001e-418a-af51-8570afca8854.JPG)
