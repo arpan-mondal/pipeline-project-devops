@@ -227,6 +227,11 @@ kubectl get nodes
 
 - Our Kubernetes installation and configuration are complete.
 
+
+
+
+
+
 # Creating Docker hosted repository in Nexus and pushing the docker image through Jenkins
 
 ## Pre-requisite
@@ -258,6 +263,12 @@ Once this set up is done in jenkins host we need to setup Insecure Registries. t
 once that's done we need to execute ```systemctl restart docker``` this is to apply new changes, also we can verify whether registry is added or not by executing ```docker info```
  
 once this is done from jenkins host you can try ```docker login -u nexus_username -p nexus_pass nexus_ip:8083```
+
+
+
+
+
+
 
 
 # Configuring mail server in Jenkins.
