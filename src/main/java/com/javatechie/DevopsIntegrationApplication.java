@@ -11,7 +11,7 @@ public class DevopsIntegrationApplication {
 
 	@GetMapping
 	public String message(){
-		return "welcome to Mr. DevOps Youtube Channel";
+		return "You have successfully completed the CI/CD Project";
 	}
 
 	public static void main(String[] args) {
