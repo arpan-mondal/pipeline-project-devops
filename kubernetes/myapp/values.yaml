@@ -9,7 +9,7 @@ image:
   pullPolicy: Always  # Updated pull policy to always pull the latest image.
 
   # Overrides the image tag whose default is the chart appVersion.
-  tag: IMAGE_TAG
+  tag: "1.16.0"
 
 service:
   type: NodePort
