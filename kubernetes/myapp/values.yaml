@@ -5,7 +5,7 @@
 replicaCount: 2
 
 image:
-  repository: pipeline-project-devops
+  repository: docker-image-repo
   pullPolicy: Always  # Updated pull policy to always pull the latest image.
 
   # Overrides the image tag whose default is the chart appVersion.
