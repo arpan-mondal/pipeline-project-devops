@@ -5,12 +5,12 @@
 replicaCount: 2
 
 image:
-  repository: IMAGE_NAME
-  pullPolicy: IfNotPresent
+  repository: pipeline-project-devops
+  pullPolicy: Always  # Updated pull policy to always pull the latest image.
+
   # Overrides the image tag whose default is the chart appVersion.
   tag: IMAGE_TAG
 
 service:
   type: NodePort
   port: 8080
-
